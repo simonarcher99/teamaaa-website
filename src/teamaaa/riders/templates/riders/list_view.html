@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container title-page">
+    <h1>Meet the Team</h1>
+</div>
+<div class="container riders-container">
+    <h1>Riders</h1>  
+    <!-- <div class="hor-line"></div>   -->
+    <div class="grid">
+        {% for rider in riders %}
+
+        <div class="profile-card">
+            {% if rider.image %}
+            <a href="#"><img src="{{ rider.image.url }}" alt="Cannot find image" class="profile-image"></a> 
+            {% endif %}
+            <h3 class="profile-name">{{ rider.name }}</h3>
+        </div>
+
+        {% endfor %}
+    </div>    
+</div>
+
+<div class="container runners-container">
+    <div class="hor-line"></div>
+    <h1>Runners</h1>
+    
+    <div class="grid">
+        {% for runner in runners %}
+
+        <div class="profile-card">
+            {% if runner.image %}
+            <a href="#"><img src="{{ runner.image.url }}" alt="Cannot find image" class="profile-image"></a> 
+            {% endif %}
+            <h3 class="profile-name">{{ runner.name }}</h3>
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

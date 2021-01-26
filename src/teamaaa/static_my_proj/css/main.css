@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'sans-serif';
+    overflow-x: hidden;
+}
+
+:root {
+    --pink: #ff1493;
+    --max-width: 800px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.nav {
+    background-color: var(--pink);
+    padding: 1rem;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links ul a,
+.nav-logo a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links ul li.active a {
+    color: #000;
+}
+
+.nav-links ul a:hover,
+.nav-logo a:hover  {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero {
+    height: calc(100vh - 54.5px);
+    background-color: #c4c4c4;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-footer {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform : translateX(-50%);
+    width: 100%;
+}
+
+.hero-footer-text {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hero-text h1 {
+    color: var(--pink);
+    font-size: 60px;
+}
+
+.hero-text h3 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.image-banner {
+    padding: 5rem 2rem;
+    display: flex;
+    width: 100vw;
+}
+
+.panel.image-1 {
+    background: url('/static/imgs/im_4.jpg');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.panel.image-2 {
+    background: url('/static/imgs/im_5.jpg');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.panel.image-3 {
+    background: url('/static/imgs/im_6.jpg');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    overflow: hidden;
+}
+
+.panel.active {
+    flex: 2.5;
+}
+
+.home-text {
+    padding: 0 2rem;
+}
+
+.left {
+    position: relative;
+    width: 60%;
+    left: 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.socials a i {
+    overflow: hidden;
+    padding: 0 1rem;
+    color: var(--pink);
+}
+
+.socials a i:hover {
+    color: black;
+    transform: scale(1.15);
+}
+
+.grid {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.profile-card {
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.profile-name {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-page {
+    height: 50vh;
+    background-color: #c4c4c4;
+}
+
+.title-page {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.riders-container h1,
+.runners-container h1 {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.hor-line {
+    height: 2px;
+    width: 92%;
+    background-color: black;
+    margin: 0 auto;
+
+}
+

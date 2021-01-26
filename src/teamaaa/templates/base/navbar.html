@@ -1,0 +1,26 @@
+{% url 'home' as home_url %}
+{% url 'contact' as contact_url %}
+{% url 'about' as about_url %}
+{% url 'riders' as riders_url %}
+
+<div class="nav">
+  <div class="container container-nav">
+    <div class="nav-logo"><a href="{{ home_url }}">TeamAAA</a></div>
+    <div class="nav-links">
+      <ul>
+        <li class="{% if request.path == home_url %}active{% endif %}">
+          <a href="{{ home_url }}">Home</a>
+        </li>
+        <li class="{% if request.path == contact_url %}active{% endif %}">
+          <a href="{{ contact_url }}">Contact</a>
+        </li>
+        <li class="{% if request.path == about_url %}active{% endif %}">
+          <a href="{{ about_url }}">About</a>
+        </li>
+        <li class="{% if request.path == riders.url %}active{% endif %}">
+          <a href="{{ riders_url }}">Riders</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
