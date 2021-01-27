@@ -1,5 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Welcome to the contact page</p>
+
+<div class="container title-page contact-title">
+    <h1>Send us a message</h1>
+</div>
+
+<div class="container form-container">
+    <div class="inner-form-container">
+        <form action="#" class="contact-form">
+            <div class="form-control">
+                <input type="Name" required>
+                <label>Full Name</label>
+            </div>
+            <div class="form-control">
+                <input type="Email" required>
+                <label>Email</label>
+            </div>
+            <div class="form-control">
+                <input type="text" required>
+                <label>Subject</label>
+            </div>
+            <div class="form-control">
+                <input type="text" required>
+                <label>Message</label>
+            </div>
+            <button class="form-btn">Send Message</button>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
